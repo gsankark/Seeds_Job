@@ -1,0 +1,17 @@
+job("DemoDSL"){
+  
+  description('Test Automation Project of XXXXXX')
+  
+  scm{
+	 git('https://github.com/GopinathJayakumar/ACMEBuild', 'master')
+	}
+  
+  triggers{
+		scm('* * * * *')
+	    }
+  
+  steps{
+		maven('package')
+	    }
+  
+}
