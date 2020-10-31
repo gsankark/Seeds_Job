@@ -3,7 +3,7 @@ job("jobName"){
   description('Test Automation for xxxxx')
   
   scm{
-	git('https://github.com/GopinathJayakumar/ACMEBuild', 'master')
+	git('https://github.com/gsankark/ACMEBuild', 'master')
   }
   
   triggers {
@@ -14,7 +14,7 @@ job("jobName"){
 	maven('package')
   }
   publishers{
-	mailer('gopirandom@gmail.com', true, true)
+	mailer('gsankark@gmail.com', true, true)
   }
 
 }
