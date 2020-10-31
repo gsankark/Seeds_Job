@@ -1,17 +1,20 @@
-job("DemoDSL"){
+job("jobName"){
   
-  description('Test Automation Project of XXXXXX')
+  description('Test Automation for LeafTaps')
   
   scm{
-	 git('https://github.com/GopinathJayakumar/ACMEBuild', 'master')
-	}
+	git('https://github.com/GopinathJayakumar/ACMEBuild', 'master')
+  }
   
-  triggers{
-		scm('* * * * *')
-	    }
+  triggers {
+     scm('* * * * *')
+  }
   
   steps{
-		maven('package')
-	    }
-  
+	maven('package')
+  }
+  publishers{
+	mailer('gopirandom@gmail.com', true, true)
+  }
+
 }
