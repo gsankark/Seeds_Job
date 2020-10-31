@@ -1,6 +1,6 @@
 job("jobName"){
   
-  description('Test Automation for LeafTaps')
+  description('Test Automation for xxxxx')
   
   scm{
 	git('https://github.com/GopinathJayakumar/ACMEBuild', 'master')
