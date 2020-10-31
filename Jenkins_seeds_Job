@@ -1,20 +1,20 @@
-job("jobName"){
+job("14DSL_Project"){
   
-  description('Test Automation for xxxxx')
+  description("Test Automation Project - LeafTaps")
   
   scm{
-	git('https://github.com/gsankark/ACMEBuild', 'master')
+    git('https://github.com/gsankark/ACMEBuild', 'master')
   }
   
-  triggers {
-     scm('* * * * *')
+  triggers{
+    scm('* * * * *')
   }
   
   steps{
-	maven('package')
+    maven('package')
   }
+  
   publishers{
-	mailer('gsankark@gmail.com', true, true)
+    mailer('gsankark@gmail.com', true, true)
   }
-
 }
